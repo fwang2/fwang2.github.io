@@ -1,4 +1,5 @@
 maruku:
     fenced_code_blocks: true
     Use numbered headers: true
-
+kramdown:
+    input: GFM
