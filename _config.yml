@@ -1,5 +1,18 @@
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        :compressed
+
+
 maruku:
     fenced_code_blocks: true
     Use numbered headers: true
+
 kramdown:
     input: GFM
+
+# About
+author:
+    name: Feiyi Wang
+    url: "http://fwang2.github.io"
+    email: fwang2@gmail.com
