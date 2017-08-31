@@ -13,6 +13,23 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 80px;
 }
+
+h1 {
+  font-size: 16pt;
+}
+
+h2 {
+  font-size: 14pt;
+}
+
+h3 {
+  font-size: 12pt;
+}
+
+.panel-footer {
+  height: 40px;
+}
+
 .footer {
   position: absolute;
   bottom: 0;

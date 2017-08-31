@@ -4,15 +4,17 @@ comments: false
 ---
 
 <div class="row"> 
-    <div class="col-md-8">
+    <!-- <div class="col-md-8"> -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="text-primary">{{ page.title }}</h3>
+                <h1 class="text-primary">{{ page.title }}</h1>
                 <span class="text-muted"><small>Posted on {{ page.date | date: "%B %-d, %Y" }}</small></span>
             </div>
             <div class="panel-body">
                 {{ content }}
             </div>
+
+            <!-- remove panel-footer
 
             <div class="panel-footer">
                 <ul class="pager blog-pager">
@@ -28,9 +30,13 @@ comments: false
                     {% endif %}
                 </ul>
             </div>
-        </div>
+            
+             remove panel-footer -->
 
-    </div>
+        </div>
+        
+    <!-- </div> -->
+
 
     <!--
     <div class="col-md-4">
