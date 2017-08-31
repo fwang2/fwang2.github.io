@@ -6,6 +6,8 @@ html {
 }
 body {
  font-family: 'Signika';
+ font-weight: lighter;
+ font-size: 145%;
   /* For Fixed Nav Bar */
   padding-top: 70px;
   /* Margin bottom by footer height */
@@ -16,8 +18,9 @@ body {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  height: 80px;
+  height: 40px;
   background-color: #f5f5f5;
+  font-size: smaller;
 }
 .footerBox {
   padding-top: 15px;

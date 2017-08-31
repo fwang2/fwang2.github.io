@@ -32,7 +32,7 @@ avatar: "/img/avatar.jpg"
 nav-links:
   # Home: ""
   About: "about"
-  Travel: "travel"
+  # Travel: "travel"
   Archive: "archive"
   
 # --- Footer options --- #
