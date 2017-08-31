@@ -1,41 +1,44 @@
+--- 
+layout: template1 
 ---
-layout: default
-title: Home
----
 
-    <title>Feiyi Wang's Home Page</title>
-</head>
-<body>
+<div class="posts-list">
+    {% for post in paginator.posts %}
+    <article class="postPreviewBox">
+        <a href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="postTitle">{{ post.title }}</h2> 
+            {% if post.subtitle %}
+                <h3 class="postSubTitle">
+                    {{ post.subtitle }}
+                </h3> 
+            {% endif %}
+        </a>
 
-<div class="container">
+        <p class="postMeta">
+            Posted on {{ post.date | date: "%B %-d, %Y" }}
+        </p>
 
-<h2> Contact Infomation </h2>
+        <div class="postPreviewContent">
+            {{ post.content | truncatewords: 50 | strip_html | xml_escape}}
+            <br/><br/>
+            <a href="{{ post.url | prepend: site.baseurl }}" class="readMoreLink">Read More ...</a>
+        </div>
 
-<ul>
+    </article>
+    {% endfor %}
+</div>
 
-    <!-- <img src="images/self_la200.png" align="right"> -->
-
-    Feiyi Wang (Ph.D.) <br>
-    <p />
-    Technology Integration Group <br>
-    <a href="http://www.nccs.gov">National Center of Computational Sciences</a><br>
-    <a href="http://www.ornl.gov"> Oak Ridge National Laboratory </a><br>
-    <p />
-    Email: fwang2 AT ornl.gov <br>
-    Phone: (865) 574-7209 <br>
-
-</ul>
-
-<h2> Research Interests </h2>
-<ul>
-    High Performance I/O, File and Storage System </br>
-    Extreme scale Data Management </br>
-    Data Analysis, Mining and Simulation </br>
-    <p>
-
-    Publications: <a href="https://scholar.google.com/citations?hl=en&user=1JMwC1sAAAAJ&view_op=list_works&sortby=pubdate"> 
-        Google Scholar Profile </a><br>
-
-</ul>
-</div> <!-- close of Contents -->
-
+{% if paginator.total_pages > 1 %}
+    <ul class="pager main-pager">
+        {% if paginator.previous_page %}
+            <li class="previous">
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+            </li>
+        {% endif %} 
+        {% if paginator.next_page %}
+            <li class="next">
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+            </li>
+        {% endif %}
+    </ul>
+{% endif %}
