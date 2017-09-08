@@ -14,6 +14,7 @@ enforce_ssl: ""
 baseurl: ""
 
 # Title of website
+#title: <img src="./watch.png" height="65">
 title: Feiyi Wang
 
 #Default keywords (used if no keywords are specified on a page basis)
@@ -32,6 +33,7 @@ avatar: "/img/avatar.jpg"
 nav-links:
   # Home: ""
   About: "about"
+  Publications: "https://scholar.google.com/citations?hl=en&user=1JMwC1sAAAAJ&view_op=list_works&sortby=pubdate"
   # Travel: "travel"
   Archive: "archive"
   
@@ -39,7 +41,7 @@ nav-links:
 
 # If the values are empty, they are ignored 
 profile:
-  name: Feiyi Wang
+  name: 
   email: fwang2@gmail.com
   github: fwang2
   linkedin: fwang2
