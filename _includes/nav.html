@@ -14,12 +14,20 @@
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
+      <!--         
         {% for link in site.nav-links %}
         <li>
           <a href="{{ site.baseurl }}/{{ link[1] }}">{{ link[0] }}</a>
         </li>
-        {% endfor %}
+        {% endfor %}      
+      -->
+
+        <li> <a href="{{ site.baseurl }}/about"> About </a>
+        <li> <a href="https://scholar.google.com/citations?hl=en&user=1JMwC1sAAAAJ&view_op=list_works&sortby=pubdate">
+          Publications </a>
+        <li> <a href="{{ site.baseurl }}/archive"> Archive </a>
       </ul>
+
     </div>
     <!--/.nav-collapse -->
   </div>

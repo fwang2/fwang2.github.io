@@ -30,6 +30,12 @@ desc: Sample Description
 avatar: "/img/avatar.jpg"
 
 # List of links in the navigation bar
+
+
+# --- 
+# ---   The following specs are not auto-generated anymore, see _include/nav.html 
+# ---   where all links are hardcoded.
+# ---
 nav-links:
   # Home: ""
   About: "about"
