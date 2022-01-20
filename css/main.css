@@ -104,12 +104,11 @@ a {
 
 /* Specific */
 
-.wallpaper {
+#wallpaper {
   /* use `img` or CSS: https://stackoverflow.com/a/1469139/6273859 */
-  background-image: url("../images/roadtrip.jpg");
+  background-image: url("../images/frontier.jpg");
   background-position: center;
-  background-size: cover;
-
+  background-size: auto;
   opacity: 0.2;
   position: fixed;
 }

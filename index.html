@@ -45,24 +45,24 @@
 </noscript>
 
 <body>
-    <div id="wallpaper" class="wallpaper"
-        data-image="images/roadtrip.jpg"></div>
+    <div id="wallpaper" class="wallpaper" data-image="/images/roadtrip.jpg"></div>
 
     <!--
         Why use `srcset=".. 1x, .. 2x"?
         1. Different devices have different pixel ratios (Retina/non-Retina 😂)
         2. Display highest def image (browser'll use it depend on your pixel ratio)
      -->
+
     <div class="content">
         <aside class="side">
             <figure id="picture" class="picture">
                 <div class="picture-shadow"></div>
                 <img id="pictureImage" class="picture-image"
                     src="images/feiyi.jpg" srcset="
-              images/feiyi.jpg    1x,
-              images/feiyi@2x.jpg 2x,
-              images/feiyi@3x.jpg 3x
-            " alt="Portrait of Feiyi Wang" width="280" />
+                            images/feiyi.jpg    1x,
+                            images/feiyi@2x.jpg 2x,
+                            images/feiyi@3x.jpg 3x
+                " alt="Portrait of Feiyi Wang" width="280" />
             </figure>
         </aside>
 
