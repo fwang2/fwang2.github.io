@@ -106,7 +106,7 @@ a {
 
 .wallpaper {
   /* use `img` or CSS: https://stackoverflow.com/a/1469139/6273859 */
-  background-image: url("../images/austria.jpg");
+  background-image: url("../images/roadtrip.jpg");
   background-position: center;
   background-size: cover;
 
@@ -178,6 +178,11 @@ a {
 
 .description {
   font-size: 1.3rem;
+}
+
+u {    
+    border-bottom: 2px dotted white;
+    text-decoration: none;
 }
 
 .contact {
@@ -370,3 +375,4 @@ a {
 .social li:nth-child(5) {
   animation-delay: 1200ms;
 }
+
