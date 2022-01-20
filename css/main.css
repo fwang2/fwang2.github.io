@@ -1,0 +1,372 @@
+html {
+  color: #fff;
+
+  /* Acts as a fallback if the `background-image` doesn't load */
+  background-color: #5f45bb;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
+  background-image: linear-gradient(to bottom right, #180cac, #d05404);
+
+  font-family: 'Noto Serif', Verdana, sans-serif;
+  font-size: 16px;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
+  line-height: 1.5; /* 1.5 * 16px = 24px */
+  min-height: 100vh;
+  min-width: 300px;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-x */
+  overflow-x: hidden;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+a {
+  color: currentColor; /* use the `color` values provided by `html` (in our case!) */
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Responsive design */
+
+/* For small screen */
+
+@media screen and (max-width: 799px) {
+  .content {
+    flex-direction: column; /* changed from default 'row' to 'column' (vertical) */
+    justify-content: center; /* makes the content centered on the "main axis" */
+    align-items: center; /* makes the content centered on the "cross axis" */
+    padding: 5rem 3rem;
+  }
+
+  .side {
+    margin-bottom: 3rem; /* keep some space from the `.content` */
+    width: 100%;
+  }
+}
+
+/* For bigger screen */
+
+@media screen and (min-width: 800px) {
+  .content {
+    align-items: center;
+    justify-content: space-around; /* as a fallback to 'space-evenly' */
+    justify-content: space-evenly; /* this val isn't available in all browsers */
+    padding: 4rem;
+  }
+
+  .side {
+    /* Check this out https://bit.ly/2BuiLEM (on freeCodeCamp) */
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 20rem;
+    width: 20rem;
+    margin-left: 4rem;
+    order: 2;
+  }
+
+  .about {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+/* General rules */
+
+.wallpaper,
+.picture-shadow,
+.picture-image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.job,
+.button {
+  font-family: Rubik;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.button,
+.social a {
+  transform-origin: center;
+  transition-duration: 300ms;
+}
+
+.social {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+/* Specific */
+
+.wallpaper {
+  /* use `img` or CSS: https://stackoverflow.com/a/1469139/6273859 */
+  background-image: url("../images/austria.jpg");
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.2;
+  position: fixed;
+}
+
+.content {
+  display: flex; /* now the `.side` and `.about` are both flexbox items */
+  position: relative; /* allows `.content` to appear above `.wallpaper` */
+  min-height: 100vh; /* make sure `.content` covers the whole page */
+}
+
+.side {
+  max-height: 16rem;
+  max-width: 16rem;
+}
+
+.about {
+  max-width: 26rem;
+}
+
+.picture {
+  padding-top: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.picture-image {
+  border-radius: 9999px; /* to ensure it to be rounded (other args supported) */
+  position: absolute;
+}
+
+.picture-shadow {
+  border-radius: 9999px; /* to ensure it to be rounded (other args supported) */
+  background-image: radial-gradient(#000 0%, rgba(0, 0, 0, 0) 70%);
+  position: absolute;
+  top: 10%;
+}
+
+.name {
+  /*
+    Tips (try NOT to misuse)
+    1. line-height is to define the height of each line
+    2. margin-x    is to define the space between each line
+   */
+  line-height: 1.125;
+  margin-bottom: 0.5rem;
+
+  font-size: 2.25rem;
+  /* font-style: italic; */
+}
+
+.job {
+  color: #ffe479;
+  font-size: 0.75em;
+}
+
+.hr {
+  background-color: #ff470f;
+  border: none;
+  content: "";
+  height: 1px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  transform-origin: center left;
+  width: 4rem;
+}
+
+.description {
+  font-size: 1.3rem;
+}
+
+.contact {
+  display: inline-block;
+  margin-top: 1.5rem;
+  vertical-align: top;
+}
+
+.button {
+  color: #9013fe;
+  background-color: #fff;
+
+  border-radius: 999999px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  font-size: 0.875rem;
+  text-shadow: none;
+  line-height: 1em;
+  padding: 1.25em 2em;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: top;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/user-select */
+  user-select: none;
+
+  transition-property: box-shadow, transform;
+  will-change: box-shadow, transform;
+}
+
+.button:hover {
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.03) translateY(-4px);
+}
+
+.button:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  transform: scale(0.97) translateY(-2px);
+}
+
+.social li {
+  height: 2rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  width: 2rem;
+}
+
+.social a {
+  display: flex;
+  opacity: 0.5;
+
+  height: 2rem;
+  width: 2rem;
+  font-size: 1.5rem; /* the icons are actually text, so you can use this */
+
+  align-items: center;
+  justify-content: center;
+
+  transition-property: opacity, transform;
+  will-change: opacity, transform;
+}
+
+.social a:hover {
+  opacity: 1;
+  transform: scale(1.25);
+}
+
+.social a:active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Animation stuff */
+
+.wallpaper,
+.picture-shadow,
+.picture-image,
+.name,
+.job,
+.hr,
+.description,
+.contact,
+.social li {
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+  animation-fill-mode: both;
+}
+
+.wallpaper,
+.picture-shadow,
+.picture-image {
+  opacity: 0;
+}
+
+.picture-shadow,
+.picture-image {
+  animation-duration: 750ms;
+  animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+}
+
+.wallpaper {
+  animation-timing-function: ease-out;
+}
+
+.wallpaper.is-loaded {
+  animation-delay: 1s;
+  animation-name: zoomOut;
+}
+
+.picture.is-loaded,
+.picture-shadow {
+  animation-name: picShadow;
+}
+
+.picture.is-loaded,
+.picture-image {
+  animation-name: picImage;
+}
+
+.name {
+  animation-name: slideDown;
+}
+
+.job {
+  animation-name: slideUp;
+}
+
+.hr {
+  animation: fillUp;
+}
+
+.description {
+  animation-name: slideUp;
+}
+
+.contact {
+  animation-name: bounceIn;
+}
+
+.social li {
+  animation-duration: 500ms;
+  animation-name: slideUp;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.name {
+  animation-delay: 100ms;
+}
+
+.job {
+  animation-delay: 200ms;
+}
+
+.hr {
+  animation-delay: 300ms;
+}
+
+.description {
+  animation-delay: 400ms;
+}
+
+.picture-image {
+  animation-delay: 500ms;
+}
+
+.picture-shadow {
+  animation-delay: 500ms;
+}
+
+.contact {
+  animation-delay: 600ms;
+}
+
+.social li:nth-child(1) {
+  animation-delay: 800ms;
+}
+
+.social li:nth-child(2) {
+  animation-delay: 900ms;
+}
+
+.social li:nth-child(3) {
+  animation-delay: 1000ms;
+}
+
+.social li:nth-child(4) {
+  animation-delay: 1100ms;
+}
+
+.social li:nth-child(5) {
+  animation-delay: 1200ms;
+}

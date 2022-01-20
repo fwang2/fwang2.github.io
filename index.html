@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+
+    <!-- Add this CSS to prevent default styles inherited from browsers -->
+    <link rel="stylesheet" href="./css/minireset.min.css" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik|Karla"
+        rel="stylesheet" />
+
+        <script defer src="./js/main.js"></script>
+    <script defer
+        src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+
+    <title>Index</title>
+</head>
+
+<noscript>
+    <style type="text/css">
+        .wallpaper {
+            animation-name: zoomOut;
+        }
+
+        .picture {
+            animation-name: dropIn;
+        }
+    </style>
+</noscript>
+
+<body>
+    <div id="wallpaper" class="wallpaper"
+        data-image="images/austria.jpg"></div>
+
+    <!--
+        Why use `srcset=".. 1x, .. 2x"?
+        1. Different devices have different pixel ratios (Retina/non-Retina 😂)
+        2. Display highest def image (browser'll use it depend on your pixel ratio)
+     -->
+    <div class="content">
+        <aside class="side">
+            <figure id="picture" class="picture">
+                <div class="picture-shadow"></div>
+                <img id="pictureImage" class="picture-image"
+                    src="images/feiyi.jpg" srcset="
+              images/feiyi.jpg    1x,
+              images/feiyi@2x.jpg 2x,
+              images/feiyi@3x.jpg 3x
+            " alt="Portrait of Feiyi Wang" width="280" />
+            </figure>
+        </aside>
+
+        <main class="about">
+            <h1 class="name">
+                Hi, I'm Feiyi Wang
+            </h1>
+            <p class="job">
+                Group Leader <br/>
+                Analytics and AI Methods at Scale <br/>
+                Oak Ridge National Laboratory
+            </p>
+            <hr class="hr" />
+
+            <div class="description">
+                <p>
+                    I do HPC system and ML/DL research on some of the world's most 
+                    powerful computing platforms such as OLCF <a href="https://www.olcf.ornl.gov/summit/">Summit</a> 
+                    and <a href="https://www.olcf.ornl.gov/frontier/">Frontier</a>.
+                </p>
+            </div>
+
+            <div class="contact">
+                <!-- <a href="mailto:fwang2@ornl.gov" class="button"> -->
+                <a href="javascript:void(0)" class="button">
+                    Get in touch
+                </a>
+            </div>
+
+            <ul class="social">
+                <li>
+                    <a href="http://github.com/at-aaims">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/fwang2/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+
+</html>
